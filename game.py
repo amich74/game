@@ -1,6 +1,6 @@
 import random
 import time
-
+chosenPath = 1
 def displayIntro():
     print("It is the end of a long deployment in these waters")
     print("You come to two paths on your trip back to base one path leads home")
@@ -15,15 +15,16 @@ def choosePath():
 
     return path
 
-def checkPath(chosenPath):
-    print("You head down the path")
-    time.sleep(2)
-    print("there's an island near by that looks weird, I am scared")
-    time.sleep(2)
-    print("But your skin begins to tingle...")
-    time.sleep(2)
-    print("I am going to go explore, don't worry people I have my gun with me")
-    correctPath = random.randint(1, 2)
+def checkPath(choice):
+    if choice == "Island":
+        print("You head down the path")
+        time.sleep(2)
+        print("there's an island near by that looks weird, I am scared")
+        time.sleep(2)
+        print("But your skin begins to tingle...")
+        time.sleep(2)
+        print("I am going to go explore, don't worry people I have my gun with me")
+        correctPath = random.randint(1, 2)
 
     if chosenPath == str(correctPath):
         print("That tingling was just the feeling of nervousness")
@@ -33,10 +34,18 @@ def checkPath(chosenPath):
         print("causing all of the energy in your body to explode")
         print("there is no record left of any island")
 
-
-playAgain = "yes"
-while playAgain == "yes" or playAgain == "y":
+count = 0 
+playAgain = True
+while playAgain:
+    # playAgain = "yes"+while playAgain == "yes" or playAgain == "y"
     displayIntro()
     choice = choosePath()
     checkPath(choice) 
-    playAgain = input("Do you want to play again? (yes or y to continue playing): ")
+    ans = input("Do you want to play again? (yes or y to continue playing): ")
+    count += 1
+    if ans == 'yes':
+        playAgain = False
+    if ans == 'y':
+        playAgain = False
+    if count > 3:
+        playAgain = False
