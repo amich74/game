@@ -1,6 +1,8 @@
 import random
 import time
 chosenPath = 1
+# global correctPath
+correctPath = 0
 def displayIntro():
     print("It is the end of a long deployment in these waters")
     print("You come to two paths on your trip back to base one path leads home")
@@ -15,7 +17,7 @@ def choosePath():
 
     return path
 
-def checkPath(choice):
+def checkPath(choice, correctPath):
     if choice == "Island":
         print("You head down the path")
         time.sleep(2)
@@ -26,7 +28,7 @@ def checkPath(choice):
         print("I am going to go explore, don't worry people I have my gun with me")
         correctPath = random.randint(1, 2)
 
-    if chosenPath == str(correctPath):
+    if chosenPath == correctPath:
         print("That tingling was just the feeling of nervousness")
         print("Welcome home!")
     else:
@@ -36,11 +38,10 @@ def checkPath(choice):
 
 count = 0 
 playAgain = True
-while playAgain:
-    # playAgain = "yes"+while playAgain == "yes" or playAgain == "y"
+while playAgain:    
     displayIntro()
     choice = choosePath()
-    checkPath(choice) 
+    checkPath(choice, correctPath) 
     ans = input("Do you want to play again? (yes or y to continue playing): ")
     count += 1
     if ans == 'yes':
