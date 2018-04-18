@@ -4,21 +4,33 @@ chosenPath = 1
 # global correctPath
 correctPath = 0
 def displayIntro():
-    print("It is the end of a long deployment in these waters")
-    print("You come to two paths on your trip back to base one path leads home")
-    print("where you will be handsomly rewarded for a job well done")
-    print("and the other leads to a island with a brand new start")
-    print("where you wont regret whats happening, new house and a new friend")
+    print("North Korea vs. The United States of America")
+    print("North Korea has nuclear weapons, USA has soldiers and shield held")
+    print("You can pick up multiple different perks along the way")
+    print("USA has less power but multiple people")
+    print("North Korea has a very slow firing rate but more power")
+    print("Each team starts with 500 health plus any shield held")
+    print("Which team will you choose in the ultimate throw down of USA vs NK")
+    
 
 def choosePath():
     path = ""
     while path != "Home" and path != "Island": 
-        path = input("Which path will you choose? (Home or Island): ")
+        path = input("Which Country Do You Go With? (North Korea or USA): ")
 
     return path
 
 def checkPath(choice, correctPath):
-    if choice == "Island":
+    if choice == "North Korea":
+        print("One nuclear bomb ready to fire")
+        time.sleep(2)
+        print("Fire in the hole")
+        time.sleep(2)
+        print("Reports are in.. Kim Jun Un, thats a miss on the bomb")
+        time.sleep(2)
+        print("Keep realoading we need to hit these damn people")
+
+    if choice == "USA":
         print("You head down the path")
         time.sleep(2)
         print("there's an island near by that looks weird, I am scared")
@@ -26,6 +38,7 @@ def checkPath(choice, correctPath):
         print("But your skin begins to tingle...")
         time.sleep(2)
         print("I am going to go explore, don't worry people I have my gun with me")
+
         correctPath = random.randint(1, 2)
 
     if chosenPath == correctPath:
@@ -40,7 +53,7 @@ count = 0
 playAgain = True
 while playAgain:    
     displayIntro()
-    choice = choosePath()
+    choice = choosePath()  #######
     checkPath(choice, correctPath) 
     ans = input("Do you want to play again? (yes or y to continue playing): ")
     count += 1
