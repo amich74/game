@@ -4,19 +4,20 @@ chosenPath = 1
 # global correctPath
 correctPath = 0
 def displayIntro():
-    print("North Korea vs. The United States of America")
-    print("North Korea has nuclear weapons, USA has soldiers and shield held")
-    print("You can pick up multiple different perks along the way")
-    print("USA has less power but multiple people")
+    print("North Korea, The USA, one giant war")
+    print("North Korea has 11 nuclear weapons")
+    print("USA hsa over 750,000 soldiers ")
+    print("USA also has 35,000 troops on the border between South Korea")
+    print("Perks on the way are available")
+    print("USA has less power but an excessive amount of soldiers")
     print("North Korea has a very slow firing rate but more power")
     print("Each team starts with 500 health plus any shield held")
     print("Which team will you choose in the ultimate throw down of USA vs NK")
     
 
-def choosePath():
-    path = ""
-    while path != "Home" and path != "Island": 
-        path = input("Which Country Do You Go With? (North Korea or USA): ")
+def choosePath0path = ""
+    while path != "USA" and path != "North Korea": 
+        path = input("Which Country Do You Go Down With? (NK or USA): ")
 
     return path
 
@@ -28,8 +29,11 @@ def checkPath(choice, correctPath):
         time.sleep(2)
         print("Reports are in.. Kim Jun Un, thats a miss on the bomb")
         time.sleep(2)
-        print("Keep realoading we need to hit these damn people")
-
+        print("Keep realoading we need to destroy this iggnorant country")
+        time.sleep(2)
+        print("Miss again")
+        time.sleep(2)
+        print("I am just going to keep hitting the button then!!")
     if choice == "USA":
         print("You head down the path")
         time.sleep(2)
