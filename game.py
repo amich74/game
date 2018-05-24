@@ -1,7 +1,9 @@
 import random
 import time
-chosenPath = 1
+chosenPath =
 # global correctPath
+# Odonnell ^ #
+# PUT IN OBJECTS #      
 correctPath = 0
 def displayIntro():
     print("North Korea, The USA, one giant war")
@@ -15,9 +17,9 @@ def displayIntro():
     print("Which team will you choose in the ultimate throw down of USA vs NK")
     
 
-def choosePath0path = ""
-    while path != "USA" and path != "North Korea": 
-        path = input("Which Country Do You Go Down With? (NK or USA): ")
+def choosePath = ''
+    while path != "USA" and path != "North Korea" and path!= "Russia": 
+        path = input("Which Country Do You Go With? (NK, Russia, USA): ")
 
     return path
 
@@ -30,40 +32,50 @@ def checkPath(choice, correctPath):
         print("Reports are in.. Kim Jun Un, thats a miss on the bomb")
         time.sleep(2)
         print("Keep realoading we need to destroy this iggnorant country")
-        time.sleep(2)
+        time.sleep(2)+
         print("Miss again")
         time.sleep(2)
         print("I am just going to keep hitting the button then!!")
     if choice == "USA":
-        print("You head down the path")
+        print("Troops grt ready!")
         time.sleep(2)
-        print("there's an island near by that looks weird, I am scared")
+        print("70,000 troops are off to NK")
         time.sleep(2)
-        print("But your skin begins to tingle...")
+        print("He is going down today...")
         time.sleep(2)
-        print("I am going to go explore, don't worry people I have my gun with me")
-
-        correctPath = random.randint(1, 2)
+        print("3 nuclear bomb sites down 1 to go")
+        time.sleep(2)
+        print("Bomb sites clear, Back home we go!")
+    if choice == "Russia"
+    print("")
+    time.sleep(2)
+    print("")
+    time.sleep(2)
+    print("")
+    time.sleep(2)
+    print("")
+    
+               correctPath = random.randint(1, 2)
 
     if chosenPath == correctPath:
-        print("That tingling was just the feeling of nervousness")
-        print("Welcome home!")
+        print("Mission Complete")
+        print("Target down")
     else:
         print("An extremely energetic burst of gamma rays pass through you")
         print("causing all of the energy in your body to explode")
-        print("there is no record left of any island")
+        print("there is no record left of any war...")
 
 count = 0 
 playAgain = True
 while playAgain:    
     displayIntro()
-    choice = choosePath()  #######
+    choice = choosePath()  ######
     checkPath(choice, correctPath) 
-    ans = input("Do you want to play again? (yes or y to continue playing): ")
+    ans = input("Do you want to play again? (yes or no to continue playing): ")
     count += 1
     if ans == 'yes':
-        playAgain = False
-    if ans == 'y':
+        playAgain = True 
+    if ans == 'no':
         playAgain = False
     if count > 3:
         playAgain = False
