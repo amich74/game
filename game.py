@@ -1,9 +1,7 @@
 import random
 import time
 chosenPath =
-# global correctPath
-# Odonnell ^ #
-# PUT IN OBJECTS #      
+### DO NOT LET 
 correctPath = 0
 def displayIntro():
     print("North Korea, The USA, one giant war")
@@ -19,7 +17,7 @@ def displayIntro():
 
 def choosePath = ''
     while path != "USA" and path != "North Korea" and path!= "Russia": 
-        path = input("Which Country Do You Go With? (NK, Russia, USA): ")
+        path = input("Which Country Do You Go With? (North Korea, USA, Russia")
 
     return path
 
