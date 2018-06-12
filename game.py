@@ -1,7 +1,6 @@
 import random
 import time
 chosenPath =
-### DO NOT LET 
 correctPath = 0
 def displayIntro():
     print("North Korea, The USA, one giant war")
